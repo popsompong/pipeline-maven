@@ -1,7 +1,10 @@
 pipeline {
 
     agent any
-    
+
+    triggers {
+        pollSCM "* * * * *"
+    }
 
     environment {
         PASS = credentials('registry-pass')
