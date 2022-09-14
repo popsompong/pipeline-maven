@@ -8,7 +8,7 @@ pipeline {
 
     environment {
         PASS = credentials('registry-pass')
-        WORKSPACE=echo "$WORKSPACE"
+        WORKSPACE=/var/jenkins_home/workspace/pipeline-docker-maven
     }
 
     stages {
