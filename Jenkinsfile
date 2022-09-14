@@ -16,7 +16,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                    echo "$WORKSPACE"
                     ./jenkins/build/mvn.sh mvn -B -DskipTests clean package
                     ./jenkins/build/build.sh
                     '''
