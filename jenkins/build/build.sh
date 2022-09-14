@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WORKSPACE=/var/jenkins_home/workspace/pipeline-docker-maven
+#WORKSPACE=/var/jenkins_home/workspace/pipeline-docker-maven
 
 
 # Copy the new jar to the build location
@@ -10,4 +10,4 @@ echo "****************************"
 echo "** Building Docker Image ***"
 echo "****************************"
 
-cd $WORKSPACE/jenkins/build/ && docker-compose -f docker-compose-build.yml build --no-cache
+cd jenkins/build/ && docker-compose -f docker-compose-build.yml build --no-cache
