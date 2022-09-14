@@ -30,9 +30,9 @@ pipeline {
         }
 
         stage('Test') {
-            steps {
-                // sh './jenkins/test/mvn.sh mvn test'
-            }
+            // steps {
+            //     sh './jenkins/test/mvn.sh mvn test'
+            // }
 
             // post {
             //     always {
@@ -43,17 +43,17 @@ pipeline {
         }
 
         stage('Push') {
-            steps {
-                // sh './jenkins/push/push.sh'
-            }
+            // steps {
+            //     sh './jenkins/push/push.sh'
+            // }
         }
 
         stage('Deploy') {
-            steps {
-                // sh '''
-                //     ./jenkins/deploy/deploy.sh
-                //     '''
-            }
+            // steps {
+            //     sh '''
+            //         ./jenkins/deploy/deploy.sh
+            //         '''
+            // }
         }
     }
 }
