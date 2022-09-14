@@ -7,4 +7,4 @@ echo "****************************"
 echo "** Building Docker Image ***"
 echo "****************************"
 
-cd jenkins/build/ && docker-compose -f docker-compose-build.yml build --no-cache
+cd /var/jenkins_home/workspace/pipeline-docker-maven/jenkins/build/ && docker-compose -f docker-compose-build.yml build --no-cache
