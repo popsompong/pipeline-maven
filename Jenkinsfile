@@ -8,6 +8,7 @@ pipeline {
 
     environment {
         PASS = credentials('registry-pass')
+        WORKSPACE=$WORKSPACE
     }
 
     stages {
