@@ -1,5 +1,5 @@
 #!/bin/bash
 
 docker login -u sompongce16 -p $PASS
-docker-compose up -d
+cd ~/workspace/pipeline-docker-maven/jenkins/deploy && docker-compose up -d
 
