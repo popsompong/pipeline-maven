@@ -28,13 +28,15 @@ RUN echo \
 RUN apt-get update && \
 apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
- 
+
 
 # Compose
 RUN curl -L "https://github.com/docker/compose/releases/download/v2.11.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
 
 
+
 RUN usermod -aG docker jenkins
+RUN usermod -aG root jenkins
 
 #RUN chown jenkins:jenkins /var/run/docker.sock
 
