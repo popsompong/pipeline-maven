@@ -8,7 +8,7 @@ pipeline {
 
     environment {
         PASS = credentials('registry-pass')
-        IMAGE = maven-project
+        IMAGE="maven-project"
     }
 
     stages {
