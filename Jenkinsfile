@@ -49,9 +49,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                    docker login -u sompongce16 -p $PASS
-                    cd ~/maven && docker-compose up -d
-                    docker logout
+                    ./jenkins/deploy/deploy.sh
                 '''
             }
         }
