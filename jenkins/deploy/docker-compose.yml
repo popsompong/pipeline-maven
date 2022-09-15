@@ -1,0 +1,5 @@
+version: '3'
+services:
+  maven:
+    image: "sompongce16/$IMAGE:$BUILD_NUMBER"
+    container_name: maven-app

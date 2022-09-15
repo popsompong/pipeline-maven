@@ -8,6 +8,7 @@ pipeline {
 
     environment {
         PASS = credentials('registry-pass')
+        IMAGE = maven-project
     }
 
     stages {
@@ -48,8 +49,10 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                    ./jenkins/deploy/deploy.sh
-                    '''
+                    docker login -u sompongce16 -p $PASS
+                    cd ~/maven && docker-compose up -d
+                    docker logout
+                '''
             }
         }
 
